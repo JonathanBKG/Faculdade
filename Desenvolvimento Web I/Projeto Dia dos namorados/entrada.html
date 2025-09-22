@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>💌 ?</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ffe6f0, #ffe6f0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .container {
+      background-color: #fff0f5;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    h2 {
+      color: #b30059;
+    }
+
+    input[type="password"] {
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      width: 200px;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #e0559f;
+    }
+
+    .error {
+      color: red;
+      margin-top: 15px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>💖 Digite a senha do nosso amor 💖</h2>
+    <input type="password" id="senha" placeholder="Data especial..." />
+    <br>
+    <button onclick="verificarSenha()">Entrar</button>
+    <div class="error" id="mensagemErro">Senha incorreta! 😢<br>Dica: data</div>
+  </div>
+
+  <script>
+    function verificarSenha() {
+      const senha = document.getElementById('senha').value;
+      const erro = document.getElementById('mensagemErro');
+
+      if (senha === "04122023" || senha === "4122023" || senha === "04/12/2023" || senha === "4/12/2023" || senha === "41223") {
+        window.location.href = "inicio.html";
+      } else {
+        erro.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
