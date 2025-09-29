@@ -38,6 +38,6 @@ public class Cliente {
 
     @Override
     public String toString(){
-        return(", Cliente: "+ this.nome);
+        return(" Cliente:" + this.nome + this.contas);
     }
 }
