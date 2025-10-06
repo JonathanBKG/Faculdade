@@ -8,10 +8,10 @@ package com.mycompany.contas;
  *
  * @author Jonathan
  */
-public class Cpoupanca extends CCorrente {
+public class CPoupanca extends CCorrente {
     private float saldoMinimo;
 
-    public Cpoupanca(int num, int sal, Cliente cli, float salmin){
+    public CPoupanca(int num, int sal, Cliente cli, float salmin){
         super(num, sal, cli);
         this.saldoMinimo = salmin;
     }
