@@ -13,19 +13,19 @@ import java.util.ArrayList;
 public class Cliente {
     private String  nome;
     private String  cpf;
-    private Arraylist<CCorrente> contas;
+    private ArrayList<CCorrente> contas;
 
     public Cliente(String nome, String cpf){
         this.nome = nome;
         this.cpf  = cpf;
-        contas = new Arraylist<CCorrente>();
+        contas = new ArrayList<CCorrente>();
     }
 
     public void addContas(CCorrente conta){
         contas.add(conta);
     }
 
-    public Arraylist<CCorrente> getContas(){
+    public ArrayList<CCorrente> getContas(){
         return contas;
     }
 

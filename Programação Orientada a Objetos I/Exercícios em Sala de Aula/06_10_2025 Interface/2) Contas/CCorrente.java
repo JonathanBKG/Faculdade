@@ -11,45 +11,43 @@ package com.mycompany.contas;
 public class CCorrente {
     
     private   int     numero;
-    protected float   saldo;
-    private   Cliente  cliente;
+    protected double  saldo;
 
-    public CCorrente(int num, float sal, Cliente cli){
+    public CCorrente(int num, double sal){
         this.numero  = num;
         this.saldo   = sal;
-        this.cliente = cli;
     }
 
-    public void creditar(float num){
-        this.saldo += num;
+    public void creditar(double valor){
+        this.saldo += valor;
 
         System.out.println("Foram creditados: ");
-        System.out.println("R$ "+ num +".");
+        System.out.println("R$ "+ valor +".");
     }
 
-    public void debitar(float num){
+    public void debitar(double valor){
         
-        if ((this.saldo - num) > 0){
-            this.saldo -= num;
+        if ((this.saldo - valor) > 0){
+            this.saldo -= valor;
 
             System.out.println("Foram debitados: ");
-            System.out.println("R$ -"+ num +".");
+            System.out.println("R$ -"+ valor +".");
         }else{
             System.out.println("Saldo Insuficiente!");
         }
     }
 
-    public float get_saldo(){
+    public double get_saldo(){
         return this.saldo;
     }
 
-    public void set_saldo(float saldo){
+    public void set_saldo(double saldo){
         this.saldo = saldo;
     }
 
     @Override
     public String toString(){
-        return("Conta:"+ this.numero +", Saldo:"+ this.saldo + this.cliente);
+        return("Conta:"+ this.numero +", Saldo:"+ this.saldo);
     }
 
 

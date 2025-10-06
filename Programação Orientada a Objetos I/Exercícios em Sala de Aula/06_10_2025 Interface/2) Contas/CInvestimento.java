@@ -14,8 +14,8 @@ public class CInvestimento extends CCorrente {
     private int dia_investimento;
     private int periodo;
 
-    public CInvestimento(int num, int sal, Cliente cli, int dinv, int per){
-        super(num, sal, cli);
+    public CInvestimento(int num, double sal, int dinv, int per){
+        super(num, sal);
         this.dia_investimento = dinv;
         this.periodo = per;
     }
@@ -28,10 +28,10 @@ public class CInvestimento extends CCorrente {
         if (diaAtual == this.dia_investimento) {
             // Se for o dia correto, aplica os juros
             // Vamos assumir uma taxa de juros de 0.5% (ou 0.005) para este exemplo.
-            float taxaJuros = 0.005f;
+            double taxaJuros = 0.005f;
             
-            float saldoAtual = get_saldo();
-            float rendimento = saldoAtual * taxaJuros;
+            double saldoAtual = get_saldo();
+            double rendimento = saldoAtual * taxaJuros;
             
             // Atualiza o saldo na conta mãe
             set_saldo(saldoAtual + (int)rendimento);
@@ -44,6 +44,13 @@ public class CInvestimento extends CCorrente {
 
     }
 
+    public double calculaTributos(){
+        double saldoAtual = get_saldo();
+        double tributo = saldoAtual * 0.05; // 5%
+        
+        return tributo;
+    }  
+    
     @Override
     public String toString(){
         return(super.toString() +", Dia do Investimento: "+ this.dia_investimento);

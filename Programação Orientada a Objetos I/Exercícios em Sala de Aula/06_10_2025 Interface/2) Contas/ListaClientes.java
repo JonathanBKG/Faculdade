@@ -4,7 +4,9 @@
  */
 package com.mycompany.contas;
 
+
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -12,18 +14,18 @@ import java.util.ArrayList;
  */
 
 public class ListaClientes {
-    private ArrayList<Cliente> cliente;   
+    private ArrayList<Cliente> clientes;   
 
     public ListaClientes(){
-        cliente = new ArrayList<Cliente>();
+        clientes = new ArrayList<Cliente>();
     }
 
     public void addClientes(Cliente cli){
-        cliente.add(cli);
+        clientes.add(cli);
     }
 
     public void imprimeClientes(){
-        for(Cliente cli:cliente){
+        for(Cliente cli:clientes){
             System.out.println(cli);
         }
     }
