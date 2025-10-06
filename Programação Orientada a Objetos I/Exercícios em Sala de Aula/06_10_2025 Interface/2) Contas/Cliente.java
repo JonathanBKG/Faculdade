@@ -1,0 +1,45 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.contas;
+
+import java.util.ArrayList;
+
+/**
+ *
+ * @author Jonathan
+ */
+public class Cliente {
+    private String  nome;
+    private String  cpf;
+    private Arraylist<CCorrente> contas;
+
+    public Cliente(String nome, String cpf){
+        this.nome = nome;
+        this.cpf  = cpf;
+        contas = new Arraylist<CCorrente>();
+    }
+
+    public void addContas(CCorrente conta){
+        contas.add(conta);
+    }
+
+    public Arraylist<CCorrente> getContas(){
+        return contas;
+    }
+
+
+    public String getNome(){
+        return this.nome;
+    }
+
+    public String getCpf(){
+        return this.cpf;
+    }
+
+    @Override
+    public String toString(){
+        return(" Cliente:" + this.nome + this.contas);
+    }
+}
