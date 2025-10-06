@@ -4,6 +4,8 @@
  */
 package com.mycompany.contas;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Jonathan
@@ -23,7 +25,7 @@ public class Cliente {
         contas.add(conta);
     }
 
-    public ArrayList<CCorrente> getContas(){
+    public Arraylist<CCorrente> getContas(){
         return contas;
     }
 

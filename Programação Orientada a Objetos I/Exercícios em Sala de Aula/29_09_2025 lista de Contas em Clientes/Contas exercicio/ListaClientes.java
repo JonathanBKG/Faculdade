@@ -4,13 +4,15 @@
  */
 package com.mycompany.contas;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Jonathan
  */
 
 public class ListaClientes {
-    private List<Cliente> cliente;   
+    private ArrayList<Cliente> cliente;   
 
     public ListaClientes(){
         cliente = new ArrayList<Cliente>();
@@ -26,5 +28,3 @@ public class ListaClientes {
         }
     }
 }
-9
-ArrayL

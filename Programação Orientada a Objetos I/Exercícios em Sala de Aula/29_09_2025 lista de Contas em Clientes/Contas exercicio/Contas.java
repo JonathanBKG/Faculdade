@@ -11,15 +11,15 @@ package com.mycompany.contas;
 public class Contas {
     public static void main(String[] args){
         ListaClientes lista = new ListaClientes();
-        Clientes cli1 = new Clientes("Joice", "394.723.947-32");
+        Cliente cli1 = new Cliente("Joice", "394.723.947-32");
         lista.addClientes(cli1);
-        Clientes cli2 = new Clientes("João", "701.324.567-09");
+        Cliente cli2 = new Cliente("João", "701.324.567-09");
         lista.addClientes(cli2);
-        Clientes cli3 = new Clientes("Ivo", "435.456.324-45");
+        Cliente cli3 = new Cliente("Ivo", "435.456.324-45");
         lista.addClientes(cli3);
-        Clientes cli4 = new Clientes("Ana", "730.043.786-05");
+        Cliente cli4 = new Cliente("Ana", "730.043.786-05");
         lista.addClientes(cli4);
-        Clientes cli5 = new Clientes("Carlos", "101.324.876-09");
+        Cliente cli5 = new Cliente("Carlos", "101.324.876-09");
         lista.addClientes(cli5);    
 
 
@@ -28,7 +28,7 @@ public class Contas {
         CCorrente cc2 = new CCorrente(2,2500);
         cli2.addContas(cc2);
 
-        CPoupanca cp1 = new CPoupanca(3, 1000, 1000);
+        CPoupanca cp1 = new Cpoupanca(3, 1000, 1000);
         cli2.addContas(cp1);
 
         CEspecial ce1 = new CEspecial(4, 1500, 3000);
