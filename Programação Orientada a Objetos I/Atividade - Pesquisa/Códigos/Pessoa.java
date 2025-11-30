@@ -12,18 +12,19 @@ public class Pessoa {
     
     private String  nome;
     private String  cpf;
-    private Pessoa  pessoa;
 
-    public Pessoa(String nome, String cpf, Pessoa pess){
+    public Pessoa(String nome, String cpf){
         this.nome   = nome;
         this.cpf    = cpf;
-        this.pessoa = pess;
     }
 
     public String setNome(String nome){
         this.nome   = nome;
 
         return "Nome alterado para: "+ nome +".";
+    }
+    public String getNome(){
+        return this.nome;
     }
 
     public String setCPF(String cpf){
@@ -35,10 +36,10 @@ public class Pessoa {
         return "CPF alterado para: "+ formatarCpf(cpf) +".";
         }
     }
-
-    public String getNome(){
-        return this.nome;
+    public String getCpf() {
+        return cpf;
     }
+    
 
     public String formatarCpf(String cpf){
         return cpf.substring(0, 3) + "." + 

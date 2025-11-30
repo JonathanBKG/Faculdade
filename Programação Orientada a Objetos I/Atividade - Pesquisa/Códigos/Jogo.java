@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
  * @author Jonathan
  */
 public class Jogo {
+    private int id;
     private String timeCasa;
     private String timeVisitante;
     private LocalDateTime dataHora;
@@ -17,7 +18,8 @@ public class Jogo {
     private String resultado; // por exemplo: "2x1" ou "a definir"
 
 
-    public Jogo(String timeCasa, String timeVisitante, LocalDateTime dataHora, String local){
+    public Jogo(int id, String timeCasa, String timeVisitante, LocalDateTime dataHora, String local){
+        this.id             =   id;
         this.timeCasa       =   timeCasa;
         this.timeVisitante  =   timeVisitante;
         this.dataHora       =   dataHora;
@@ -25,6 +27,14 @@ public class Jogo {
         this.resultado      =   "a definir";
     }
 
+    //-----------------------------------------
+    public int getId() { 
+        return id; 
+    }
+    public void setId(int id) {
+        this.id = id; 
+    }
+    //-----------------------------------------
     public String getTimeCasa(){
         return timeCasa;
     }
@@ -42,7 +52,7 @@ public class Jogo {
     public LocalDateTime getDataHora(){
         return dataHora;
     }
-    public void setLocalDateTime(LocalDateTime dataHora){
+    public void setDataHora(LocalDateTime dataHora){
         this.dataHora = dataHora;
     }
     //-----------------------------------------

@@ -42,5 +42,9 @@ public class Jogador extends Pessoa{
     public int getNumCamisa(){
         return this.num_camisa;
     }
+    
+    public String getStatus() {
+        return this.status;
+    }
 
 }
